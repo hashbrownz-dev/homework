@@ -25,3 +25,14 @@ const getEven = () => {
 ////////////////////////////////
 //FIZZ BUZZ
 ////////////////////////////////
+
+const fizzbuzz = () => {
+    for(let i = 1; i <= 100; i++){
+        let output = '';
+        if(!(i % 3)) output += 'Fizz';
+        if(!(i % 5)) output += 'Buzz';
+        output ? console.log(output) : console.log(i);
+    }
+}
+
+fizzbuzz();
