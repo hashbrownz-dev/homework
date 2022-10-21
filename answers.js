@@ -52,3 +52,16 @@ wolfy[3] = "Gotham City";
 dart.push("Hawkins");
 wolfy.shift();
 wolfy.unshift("Gameboy");
+
+////////////////////////////////
+//YELL AT THE NINJA TURTLES
+////////////////////////////////
+
+const yellAtTheNinjaTurtles = () => {
+    const ninjaTurtles = ['Michaelangelo','Leonardo','Raphael','Donatello'];
+    for(let turtle of ninjaTurtles){
+        console.log(turtle.toUpperCase());
+    }
+}
+
+//yellAtTheNinjaTurtles();
