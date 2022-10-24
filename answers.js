@@ -72,15 +72,29 @@ const yellAtTheNinjaTurtles = () => {
 
 const methodsRevisited = () => {
     const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+    console.log('The index of Titanic');
     console.log(favMovies.indexOf("Titanic"));
     favMovies.sort();
+    console.log('Sorting the array:')
     console.log(favMovies);
     favMovies.pop();
     favMovies.push('Guardians of the Galaxy');
     favMovies.reverse();
     favMovies.shift();
-    console.log(favMovies.unshift('Gremlins'));
+    favMovies.unshift('Gremlins');
     //unshift returns the length of the array
+    favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar');
+    const lastHalf = favMovies.slice(Math.floor(favMovies.length / 2));
+    console.log('The last half of the array.');
+    console.log(lastHalf);
+    console.log('The finished array');
+    console.log(favMovies);
+    console.log('The index of Fast and Furious');
+    console.log(favMovies.indexOf('Fast and Furious'));
 }
 
-//methodsRevisited();
+methodsRevisited();
+
+////////////////////////////////
+//
+////////////////////////////////
