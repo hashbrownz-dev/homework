@@ -85,12 +85,13 @@ const methodsRevisited = () => {
     //unshift returns the length of the array
     favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar');
     const lastHalf = favMovies.slice(Math.floor(favMovies.length / 2));
+    const firstHalf = favMovies.slice(0,Math.floor(favMovies.length / 2));
     console.log('The last half of the array.');
     console.log(lastHalf);
     console.log('The finished array');
     console.log(favMovies);
     console.log('The index of Fast and Furious');
-    console.log(favMovies.indexOf('Fast and Furious'));
+    console.log(firstHalf.indexOf('Fast and Furious'));
 }
 
 //methodsRevisited();
@@ -197,3 +198,20 @@ console.log(fibonacci());
 ////////////////////////////////
 //CHECKERBOARD
 ////////////////////////////////
+
+const checkerboard = (cols = 8, rows = 8) => {
+    let board = '';
+    for(let r = 0; r < rows; r++){
+        let row = '';
+        let char;
+        r%2 ? char = '#' : char = ' ';
+        for(let c = 0; c < cols; c++){
+            row += char;
+            char === '#' ? char = ' ' : char = '#';
+        }
+        board += row + '\n';
+    }
+    return board;
+}
+
+console.log(checkerboard());
