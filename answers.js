@@ -93,8 +93,27 @@ const methodsRevisited = () => {
     console.log(favMovies.indexOf('Fast and Furious'));
 }
 
-methodsRevisited();
+//methodsRevisited();
 
 ////////////////////////////////
-//
+//WHERE IS WALDO?
 ////////////////////////////////
+
+const whereIsWaldo = [
+    ["Timmy", "Frank"],
+    "Eggbert",
+    ["Lucinda", "Jacc", "Neff", "Snoop"],
+    ["Petunia", ["Baked Goods", "Waldo"]]
+];
+
+//remove Eggbert
+whereIsWaldo.splice(1,1);
+//console.log(whereIsWaldo);
+
+//Change 'Neff' to 'No One'
+whereIsWaldo[1][2] = 'No One';
+//console.log(whereIsWaldo);
+
+//Access and console.log 'Waldo'
+console.log(whereIsWaldo[2][1][1]);
+
