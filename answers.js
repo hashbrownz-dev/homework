@@ -159,6 +159,7 @@ const findTheMedian = (nums) => {
         //Find the mean of the two middle values with the formula (n1 + n2) / 2
         return (n1 + n2) / 2;
     } else { 
+        //If the dataset is odd:
         //Calculate the middle position with the formula n / 2 where n is the number of values in the dataset.
         //Return the value in the middle position
         return sorted[Math.floor(sorted.length / 2)];
@@ -168,9 +169,13 @@ const findTheMedian = (nums) => {
 const unitTest1 = [350, 800, 220, 500, 130];
 const unitTest2 = [350, 800, 220, 500, 130, 1150];
 
-console.log(findTheMedian(unitTest1));
+console.log(`Test One: ${findTheMedian(unitTest1)}`);
 //expected output = 350
-console.log(findTheMedian(unitTest2));
+console.log(`Test Two: ${findTheMedian(unitTest2)}`);
 //expected output = 425
-console.log(findTheMedian(nums));
+console.log(`Answer: ${findTheMedian(nums)}`);
 //expected output = 15;
+
+////////////////////////////////
+//HUNGRY FOR MORE?
+////////////////////////////////
