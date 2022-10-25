@@ -115,5 +115,29 @@ whereIsWaldo[1][2] = 'No One';
 //console.log(whereIsWaldo);
 
 //Access and console.log 'Waldo'
-console.log(whereIsWaldo[2][1][1]);
+//console.log(whereIsWaldo[2][1][1]);
 
+////////////////////////////////
+//EXCITED KITTEN
+////////////////////////////////
+
+
+const excitedKitten = () => {
+    const getRandomMessage = () => {
+        const kittenMessages = [
+            '...human...why you taking pictures of me?...',
+            '...the catnip made me do it...',
+            '...why does the red dot always get away...'
+        ]
+        return kittenMessages[Math.floor(Math.random() * 3)]
+    }
+    for(let i = 1; i <= 20; i++){
+        let message = 'Love me, pet me!  HSSSSSS!';
+        if(!(i%2)){
+            message += ` ${getRandomMessage()}`;
+        }
+        console.log(message);
+    }
+}
+
+excitedKitten();
