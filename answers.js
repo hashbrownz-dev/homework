@@ -140,4 +140,37 @@ const excitedKitten = () => {
     }
 }
 
-excitedKitten();
+//excitedKitten();
+
+////////////////////////////////
+//FIND THE MEDIAN
+////////////////////////////////
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+const findTheMedian = (nums) => {
+    //Order the values from low to high
+    const sorted = [...nums].sort((a,b) => a - b);
+    //Is our data set odd or even-numbered?
+    if(!(sorted.length % 2)){
+        //If the dataset is even:
+        //Calculate the two middle positions with the formulas (n/2) - 1 and (n/2) where n is the number of values in the dataset.
+        let n1 = sorted[(sorted.length / 2 )- 1], n2 = sorted[sorted.length / 2];
+        //Find the mean of the two middle values with the formula (n1 + n2) / 2
+        return (n1 + n2) / 2;
+    } else { 
+        //Calculate the middle position with the formula n / 2 where n is the number of values in the dataset.
+        //Return the value in the middle position
+        return sorted[Math.floor(sorted.length / 2)];
+    }
+}
+
+const unitTest1 = [350, 800, 220, 500, 130];
+const unitTest2 = [350, 800, 220, 500, 130, 1150];
+
+console.log(findTheMedian(unitTest1));
+//expected output = 350
+console.log(findTheMedian(unitTest2));
+//expected output = 425
+console.log(findTheMedian(nums));
+//expected output = 15;
