@@ -179,3 +179,21 @@ console.log(`Answer: ${findTheMedian(nums)}`);
 ////////////////////////////////
 //HUNGRY FOR MORE?
 ////////////////////////////////
+
+////////////////////////////////
+//FIBONACCI
+////////////////////////////////
+
+const fibonacci = (limit = 10) => {
+    const output = [0,1];
+    for(let i = 0; i < limit - 2; i ++){
+        output.push(output[i] + output [i+1]);
+    }
+    return output.toString(`, `);
+}
+
+console.log(fibonacci());
+
+////////////////////////////////
+//CHECKERBOARD
+////////////////////////////////
